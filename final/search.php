@@ -1,12 +1,8 @@
 <?php include_once 'header.php'; ?>
 <div class = "explore">
-<h1> Explore our categories:</h1>
-<div class = "category-row">
-<img src= "pictures/Appetizer.png">
-<img src= "pictures/Breakfast.png">
-<img src= "pictures/Lunch.png">
-<img src= "pictures/Dinner.png">
-<img src= "pictures/Dessert.png">
+<h1> Explore all recipes</h1>
+<div class = "search-bar">
+<input type="text" placeholder="Search..">
 </div>
 </div>
 

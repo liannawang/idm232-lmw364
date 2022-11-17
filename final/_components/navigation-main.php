@@ -1,22 +1,22 @@
 <?php
 $main_navigation = [
     [
-        'title' => 'About',
-        'url' => 'about.php',
+        'title' => 'Categories',
+        'url' => 'categories.php',
     ],
     [
-        'title' => 'Contact',
-        'url' => 'contact.php',
+        'title' => 'Search',
+        'url' => 'search.php',
     ],
     [
-        'title' => 'Book',
-        'url' => 'book.php',
+        'title' => 'Add a recipe',
+        'url' => 'final/admin/users/index.php',
     ],
 
 ];
 
 ?>
-<header class="px-2 py-4 bg-black">
+<header class="px-2 py-2 bg-black">
   <div class="max-w-7xl flex justify-between mx-auto">
     <a href="<?php echo site_url(); ?>">
       <img src="<?php echo site_url(); ?>/dist/images/logo.png" alt="logo">

@@ -13,8 +13,7 @@ while ($recipes = mysqli_fetch_array($result)) {
                 <div class='card'>
                 <img class='' width='300px' height='250px' src='{$recipes['image_path']}' alt=''>
                 <h3 class = ''> ⭐️⭐️⭐️⭐️⭐️</h3>
-                    <h3 class=''>{$recipes['recipe_title']}</p>
-                    <p class=''>{$recipes['description']}</p>
+                    <h3 class='title'>{$recipes['recipe_title']}</p>
                 </div> 
 
             </div>

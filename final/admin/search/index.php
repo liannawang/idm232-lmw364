@@ -51,28 +51,11 @@ if ($results->num_rows > 0) {
       </div>
 
 
-
-    <?php
-    $site_url = site_url();
-    if ($recipes_results) {
-      while ($recipes_results = mysqli_fetch_assoc($results)) {
-        // echo '<div class="flex flex-row justify-center items-center">';
-        echo " <div class='flex flex-row justify-center items-center'>
-        <a href='{$site_url}/recipeDetail.php?id={$recipes_results['id']}' class='' >
-            <div class=''>
-            <img class='' width='100px' height='100px' src='{$site_url}/{$recipes_results['image_path']}' alt=''>
-                <div class=''>
-                    <p class=''>{$recipes_results['recipe_title']}</p>
-                    <p class=''>{$recipes_results['description']}</p>
-                </div> 
-
-            </div>
-        </a></div>
-    ";
-        // echo '</div>';
-      }
-    }
-    ?>
+      <div class = "cards">
+<?php include __DIR__ . '/searchCards.php'; ?>
+  
+</div>
+    
 
   </div>
 </div>

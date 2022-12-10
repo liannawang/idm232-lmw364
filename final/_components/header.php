@@ -20,7 +20,7 @@ $document_title = $page_title . ' | ' . $site_title; // Home | JAWN Clips
   <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Numans&display=swap" rel="stylesheet">
   <!-- Including TinyMCE Library -->
-  <script src="https://cdn.tiny.cloud/1/7rpnj47it93x8jhvzo8vbgdulo0j4qdj5xdmud6xc46gy8fb/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="https://cdn.tiny.cloud/1/m747b4wgu9w3il7wdrv65wmx6j7i0ul5pbf94qsedxx5y5c3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   <!-- Including TailwindCss Library -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- <script src="tailwind.config.js"></script> -->

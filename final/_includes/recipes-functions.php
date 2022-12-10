@@ -4,8 +4,8 @@ function add_recipe($recipe_title, $image_path, $description, $servings, $total_
 {
     global $db_connection;
     $query = 'INSERT INTO recipes';
-    $query .= ' ( recipe_title, image_path, description, servings, total_time, ingredients, instructions)';
-    $query .= " VALUES (' $recipe_title', '$image_path', '$description', '$servings', '$total_time', '$ingredients', '$instructions')";
+    $query .= ' ( recipe_title, image_path, description, ingredients, instructions)';
+    $query .= " VALUES (' $recipe_title', '$image_path', '$description', '$ingredients', '$instructions')";
     $result = mysqli_query($db_connection, $query);
     return $result;
 }

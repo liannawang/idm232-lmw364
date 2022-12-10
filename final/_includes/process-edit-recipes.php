@@ -10,8 +10,6 @@ $id = $_POST['id'];
 $recipe_title_value = sanitize_value($_POST['recipe_title']);
 $image_path_value = sanitize_value($_POST['image_path']);
 $description_value = sanitize_value($_POST['description']);
-$servings_value = sanitize_value($_POST['servings']);
-$total_time_value = sanitize_value($_POST['total_time']);
 $ingredients_value = sanitize_value($_POST['ingredients']);
 $instructions_value = sanitize_value($_POST['instructions']);
 
@@ -20,8 +18,6 @@ $query = "UPDATE recipes SET
      recipe_title = '{$recipe_title_value}',
      image_path = '{$image_path_value}',
      description = '{$description_value}', 
-     servings = '{$servings_value}', 
-     total_time = '{$total_time_value}', 
      ingredients = '{$ingredients_value}', 
      instructions = '{$instructions_value}' 
 WHERE id = {$id}";

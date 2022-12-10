@@ -25,30 +25,28 @@ while ($recipes = mysqli_fetch_array($result)) {
     echo "
         <div class=''>
             <div class=''>
-                <div class=''>
-                    <div>
-                        <h2 class=''>{$recipes['recipe_title']}</h2>
-                        <div> 
-                            <p class=''> Servings: {$recipes['servings']}</p>
-                            <p class=''> Total Time (prep and cook): {$recipes['total_time']}</p>
-                        </div>
-                    </div>
-                    <img class='' width='500px' height='500px' src='{$site_url}/{$recipes['image_path']}' alt=''>
-                    <div>
-                        <p class=''>{$recipes['description']}</p>
-                    </div>
+                <div class='recipewrapper'>
+                    <div= 'detailh1'>
+                        <h1 class='detailh1'>{$recipes['recipe_title']}</h1>
+                        <p class='description'>{$recipes['description']}</p>
 
-                    <hr class='hr_30'>
+                        <img class='detailimg' src='{$site_url}/{$recipes['image_path']}' alt=''>
+                    
+
+                 
 
                     <div class=''>
-                        <div class=''>
-                            <h5> Ingredients </h5>
-                            <p class=''>{$recipes['ingredients']}</p>
+                        <div class='sans'>
+                            <h3 class ='detailh3'> Ingredients </h3>
+                            <p class='detailp'>{$recipes['ingredients']}</p>
                         </div>
-                        <div class=''>
-                            <h5> Directions </h5>
-                            <p class=''>{$recipes['instructions']}</p>
+                        <div class='sans'>
+                            <h3 class ='detailh3'> Instructions </h3>
+                            <p class='detailp'>{$recipes['instructions']}</p>
                         </div>
+                    </div>
+                    </div>
+                    
                     </div> 
                 </div>
             </div>
@@ -60,3 +58,4 @@ while ($recipes = mysqli_fetch_array($result)) {
           </div> -->
 
 <?php include_once __DIR__ . '/_components/footer.php';
+

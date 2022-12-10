@@ -22,28 +22,21 @@ $result = mysqli_query($db_connection, $query);
 ?>
 
 
-
-
-
-
-
-<div class="">
-    <div class="">
-        <div class="">
-            <h1 class="">All Recipes</h1>
-        </div>
-    </div>
+<!-- <h2 class = "newh3">All Our Recipes</h2> -->
+<div class = "cards">
+<?php include __DIR__ . '/_components/recipeCards.php'; ?>
+  
 </div>
 
-<div class="">
-    <div class="">
-        <?php include __DIR__ . '/_components/recipeCards.php'; ?>
-    </div>
-</div>
+
+
+
+
+
+
+
 
 <?php include_once __DIR__ . '/_components/footer.php';?>
-
-
 
 
 

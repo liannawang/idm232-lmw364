@@ -45,8 +45,8 @@ if (!isset($recipes)) {
           <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500 '>{$recipes['instructions']}</td>
 
             <td class='relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6'>
-              <a href='{$site_url}/admin/recipes/edit.php?id={$recipes['id']}' class='text-red-400  hover:text-red-500'>edit &nbsp;</a>
-              <a href='{$site_url}/admin/recipes/delete.php?id={$recipes['id']}' class='text-pink-600 hover:text-pink-800'>delete</a>
+              <a href='{$site_url}/admin/recipes/edit.php?id={$recipes['id']}' class='text-slate-400  hover:text-slate-500'>edit &nbsp;</a>
+              <a href='{$site_url}/admin/recipes/delete.php?id={$recipes['id']}' class='text-slate-600 hover:text-slate-800'>delete</a>
             </td>
           </tr>";
     }

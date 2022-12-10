@@ -13,19 +13,21 @@ $result = mysqli_query($db_connection, $query);
 
 ?>
 
+<div class="explore" >
+        <h1 class="newh1">View All Recipes</h1>
+        <form action="<?php echo site_url(); ?>/admin/search" method="GET">
+          <input class=" border-black border-2" type="text" name="search" id="search" placeholder="Search for a recipe!">
+          <!-- <button type="submit">Search</button> -->
+        </form>
 
-<div class="">
-    <div class="">
-        <div class="">
-            <h1 class="">All Recipes</h1>
-        </div>
-    </div>
 </div>
 
-<div class="">
-    <div class="">
-        <?php include __DIR__ . '/_components/recipeCards.php'; ?>
-    </div>
+
+
+
+<div class = "cards">
+<?php include __DIR__ . '/_components/recipeCards.php'; ?>
+  
 </div>
 
 

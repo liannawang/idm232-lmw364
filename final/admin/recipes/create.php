@@ -15,15 +15,15 @@ $result = mysqli_query($db_connection, $query);
   <div class="px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">
       <div class="sm:flex-auto">
-        <h1 class="text-xl font-semibold text-pink-600">create new recipe</h1>
+
       </div>
     </div>
     <div class="mt-8 flex flex-col">
       <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-          <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+          <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg lightgreen" >
             <form action="<?php echo site_url(); ?>/_includes/process-create-recipes.php" method="POST">
-
+            <h1 class="newh1">Add A Recipe</h1>
 
 
               <br>
@@ -71,7 +71,7 @@ $result = mysqli_query($db_connection, $query);
 
               <br>
 
-              <input class="m-6 nline-flex items-center justify-center rounded-md border border-transparent bg-pink-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-700 focus:ring-offset-2 sm:w-auto cursor-pointer" type="submit" value="submit">
+              <input class="m-6 nline-flex items-center justify-center rounded-md border border-transparent bg-slate-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 sm:w-auto cursor-pointer" type="submit" value="submit">
 
             </form>
           </div>

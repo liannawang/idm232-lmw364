@@ -75,7 +75,7 @@ if ($result->num_rows > 0) {
               </div>
               <br>
 
-              <input class=" m-6 nline-flex items-center justify-center rounded-md border border-transparent bg-red-400 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:w-auto cursor-pointer" type="submit" value="save edits">
+              <input class=" m-6 nline-flex items-center justify-center rounded-md border border-transparent bg-slate-400 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 sm:w-auto cursor-pointer" type="submit" value="save edits">
               <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
             </form>
           </div>

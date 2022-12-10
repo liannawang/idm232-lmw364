@@ -18,7 +18,7 @@
   </div>
   
   <div class="nav-links">
-  <a href="<?php echo site_url(); ?>/viewAll.php" >View All Recipes</a>
+  <a href="<?php echo site_url(); ?>/view-all.php" >View All Recipes</a>
   <a href="<?php echo site_url(); ?>/admin/recipes/index.php" >Admin</a>
   <!-- <a href="<?php echo site_url(); ?>/admin/recipes/index.php">Login</a> -->
 

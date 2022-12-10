@@ -1,18 +1,25 @@
 <?php
 if (!isset($recipes)) {
-    echo '$recipes variable is not defined. Please check the code.';
+  // echo '$recipes variable is not defined. Please check the code.';
 }
 ?>
 <table class="min-w-full divide-y divide-gray-300">
   <thead class="bg-gray-50">
     <tr>
-      <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">ID</th>
-      <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Name
-      </th>
-      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Email</th>
-      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Phone</th>
+      <!-- <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">#</th> -->
+      <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Recipe Name</th>
+      <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Image</th>
+      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Description</th>
+      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Servings</th>
+      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Total Time</th>
+      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Ingredients</th>
+      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Instructions</th>
+      <!-- <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Edit</th> -->
+
+    
+
       <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
-        <span class="sr-only">Edit</span>
+        <span class="sr-only">edit</span>
       </th>
     </tr>
   </thead>
@@ -20,19 +27,32 @@ if (!isset($recipes)) {
     <?php
     // Cant combine functions with string so we have to assign the function to a variable here.
     $site_url = site_url();
-while ($recipe = mysqli_fetch_array($recipes)) {
-    echo "
+    while ($recipes = mysqli_fetch_array($result)) {
+      echo "
           <tr>
-            <td class='whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6'>{$recipe['id']}</td>
-            <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500'>{$recipe['first_name']} {$recipe['last_name']}</td>
-            <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500'>{$recipe['email']}</td>
-            <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500'>{$recipe['phone']}</td>
+
+         
+            <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500 '>{$recipes['recipe_title']}</td>
+            
+
+            <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500 '>
+          <img class='' width='100px' height='100px' src='{$site_url}/{$recipes['image_path']}' alt=''></td>
+          
+          <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500 '>{$recipes['description']}</td>
+          <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500 '>{$recipes['servings']}</td>
+          <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500 '>{$recipes['total_time']}</td>
+          <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500 '>{$recipes['ingredients']}</td>
+          <td class='whitespace-nowrap px-3 py-4 text-sm text-gray-500 '>{$recipes['instructions']}</td>
+
             <td class='relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6'>
-              <a href='{$site_url}/admin/recipes/edit.php?id={$recipe['id']}' class='text-slate-800 hover:text-red-600'>Edit</a>
-              <a href='{$site_url}/admin/recipes/delete.php?id={$recipe['id']}' class='text-slate-800 hover:text-red-600'>Delete</a>
+              <a href='{$site_url}/admin/recipes/edit.php?id={$recipes['id']}' class='text-red-400  hover:text-red-500'>edit &nbsp;</a>
+              <a href='{$site_url}/admin/recipes/delete.php?id={$recipes['id']}' class='text-pink-600 hover:text-pink-800'>delete</a>
             </td>
           </tr>";
-}
-?>
+    }
+    ?>
   </tbody>
 </table>
+
+
+
